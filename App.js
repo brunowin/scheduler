@@ -9,11 +9,6 @@ const Banner = ({title}) => (
 	<Text style={styles.bannerStyle}>{title || '[loading...]'}</Text>
 	);
 
-const Scoreboard = () => {
-	const [score, setScore] = useState(0);
-}
-
-
 const App = () => {
 	const [schedule, setSchedule] = useState({title: '', courses: []});
 	const url = 'https://courses.cs.northwestern.edu/394/data/cs-courses.php';
