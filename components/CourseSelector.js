@@ -6,7 +6,7 @@ import Course from './Course';
 import {useState} from 'react';
 import {hasConflict} from '../utils/course'
 
-const CourseSelector = ({courses}) => {
+const CourseSelector = ({courses, view}) => {
 	const [selected, setSelected] = useState([]);
 	const toggle = course => setSelected(selected => (
 		selected.includes(course) ? selected.filter(x => x !== course) : [...selected, course]
@@ -19,8 +19,9 @@ const CourseSelector = ({courses}) => {
 				<Course key={course.id} course={course}
 					select={toggle}
 					isDisabled={hasConflict(course, selected)}
-					isSelected={selected.includes(course)}/>
-
+					isSelected={selected.includes(course)}
+					view={view}
+					/>
 					))
 		}
 		</View>

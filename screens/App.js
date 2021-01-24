@@ -2,8 +2,8 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import ScheduleScreen from './screens/ScheduleScreen';
-import CourseDetailScreen from './screens/CourseDetailScreen';
+import ScheduleScreen from '.screens/ScheduleScreen';
+import CourseDetailScreen from '.screens/CourseDetailScreen';
 
 const Stack = createStackNavigator();
 
@@ -11,15 +11,14 @@ const App = () => {
 	return (
 		<NavigationContainer>
 			<Stack.Navigator>
-				<Stack.Screen name ="Schedule Screen"
-				component={ScheduleScreen}
-				options={{title: 'Course Schedule'}}
-				/>
 				<Stack.Screen name="CourseDetailScreen"
 				component={CourseDetailScreen}
 				options={{title: 'Course Detail'}}
 				/>
-
+				<Stack.Screen name ="Schedule Screen"
+				component={ScheduleScreen}
+				options={{title: 'Schedule'}}
+				/>
 			</Stack.Navigator>
 		</NavigationContainer>
 );
