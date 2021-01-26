@@ -28,8 +28,6 @@ const ScheduleScreen = ({navigation}) => {
 	const view = (course) => {
 		navigation.navigate(canEdit ? 'CourseEditScreen' : 'CourseDetailScreen', {course});
 	};
-
-	const url = 'https://courses.cs.northwestern.edu/394/data/cs-courses.php';
 	useEffect( () => {
 		const db = firebase.database().ref();
 		const handleData = snap => {
